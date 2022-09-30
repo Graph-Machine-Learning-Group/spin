@@ -1,0 +1,2 @@
+config_dir: 'config/'
+log_dir: 'log/'

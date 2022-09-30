@@ -1,0 +1,32 @@
+##########################        GRIN CONFIG        ##########################
+
+#### Dataset params ###########################################################
+#dataset_name: [la_point, bay_point, la_bock, bay_bock, air, air36]
+val_len: 0.1
+
+window: 24  # [24, 36]
+stride: 1
+
+#### Training params ##########################################################
+whiten_prob: 0.05
+scale_target: True
+
+epochs: 300
+loss_fn: l1_loss
+lr_scheduler: cosine
+lr: 0.001
+batch_size: 32
+batches_epoch: 160
+
+#### Model params #############################################################
+model_name: 'grin'
+
+hidden_size: 64
+ff_size: 64
+embedding_size: 8
+n_layers: 1
+kernel_size: 2
+decoder_order: 1
+layer_norm: false
+ff_dropout: 0
+merge_mode: 'mlp'

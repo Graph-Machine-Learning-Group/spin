@@ -1,0 +1,16 @@
+name: spin
+channels:
+  - pytorch
+  - pyg
+  - defaults
+  - conda-forge
+dependencies:
+  - pip
+  - pyg>=2.0
+  - python=3.8
+  - pytorch>=1.9
+  - torchvision
+  - torchaudio
+  - wheel
+  - pip:
+      - torch_spatiotemporal==0.1.1

@@ -1,0 +1,32 @@
+######################        TRANSFORMER CONFIG        #######################
+
+#### Dataset params ###########################################################
+#dataset_name: [la_point, bay_point, la_bock, bay_bock, air, air36]
+val_len: 0.1
+
+window: 24  # [24, 36]
+stride: 1
+
+#### Training params ##########################################################
+whiten_prob: [0.2, 0.5, 0.8]
+scale_target: True
+
+epochs: 300
+loss_fn: l1_loss
+lr_scheduler: magic
+lr: 0.0008
+patience: 40
+precision: 16
+batch_size: 8
+batch_inference: 32
+batches_epoch: 300
+
+#### Model params #############################################################
+model_name: 'transformer'
+condition_on_u: True
+hidden_size: 64
+ff_size: 128
+n_heads: 4
+n_layers: 5
+dropout: 0
+axis: 'both'

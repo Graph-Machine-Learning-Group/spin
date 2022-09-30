@@ -1,0 +1,35 @@
+#########################        SAITS CONFIG        ##########################
+
+#### Dataset params ###########################################################
+#dataset_name: [la_point, bay_point, la_bock, bay_bock, air, air36]
+val_len: 0.1
+
+window: 24  # [24, 36]
+stride: 1
+
+#### Training params ##########################################################
+whiten_prob: 0.2
+prediction_loss_weight: 1
+scale_target: True
+
+epochs: 300
+loss_fn: l1_loss
+lr: 0.0003
+batch_size: 128
+batches_epoch: 300
+patience: 40
+
+#### Model params #############################################################
+model_name: 'saits'
+input_with_mask: True
+
+n_groups: 1
+n_group_inner_layers: 1
+param_sharing_strategy: inner_group
+d_model: 1024
+d_inner: 1024
+n_head: 4
+d_k: 256
+d_v: 256
+dropout: 0
+diagonal_attention_mask: True
